@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Person with Greeting Method</title>
+  <script>
+    // Constructor function
+    function Person(name, age) {
+      this.name = name;
+      this.age = age;
+
+      // Method: greeting
+      this.sayHello = function() {
+        return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+      };
+    }
+
+    // Create a new Person object
+    const person1 = new Person("Alice", 25);
+
+    // Show result on page
+    window.onload = function () {
+      alert(person1.sayHello());
+    };
+  </script>
+</head>
+<body>
+  <h2>Check the alert for a greeting!</h2>
+</body>
+</html>

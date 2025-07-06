@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Navigation Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f9f9f9;
+    }
+
+    .box {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: #fff;
+      border-radius: 6px;
+    }
+
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+      font-size: 14px;
+      background-color: #007acc;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005f99;
+    }
+
+    #output {
+      background-color: #e0f7fa;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="container" class="box">
+    <h2>Inside Container</h2>
+    <p id="para1">This is paragraph 1</p>
+    <p>This is paragraph 2</p>
+  </div>
+
+  <button onclick="showParent()">Show Parent Node</button>
+  <button onclick="showChildren()">Show Child Nodes</button>
+  <button onclick="showNextSibling()">Show Next Sibling</button>
+
+  <div id="output"><strong>Output:</strong> Click a button to see results here.</div>
+
+  <script>
+    const para = document.getElementById("para1");
+    const container = document.getElementById("container");
+    const output = document.getElementById("output");
+
+    function showParent() {
+      output.innerHTML = "<strong>Parent Node:</strong> " + para.parentNode.tagName;
+    }
+
+    function showChildren() {
+      let children = container.childNodes;
+      let result = "<strong>Child Nodes:</strong><ul>";
+      children.forEach(node => {
+        result += `<li>${node.nodeName} (${node.nodeType === 3 ? 'Text Node' : 'Element'})</li>`;
+      });
+      result += "</ul>";
+      output.innerHTML = result;
+    }
+
+    function showNextSibling() {
+      const sibling = para.nextElementSibling;
+      output.innerHTML = `<strong>Next Sibling Element:</strong> ${sibling ? sibling.outerHTML : 'None'}`;
+    }
+  </script>
+
+</body>
+</html>

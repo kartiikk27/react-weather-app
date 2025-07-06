@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Card with Color</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e0f7fa; /* Light blue background */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      background-color: #ffffff; /* White card */
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+      width: 90%;
+      max-width: 400px;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      color: #00796b; /* Teal heading */
+      margin-top: 0;
+    }
+
+    p {
+      color: #333333; /* Dark gray text */
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>Responsive Card</h2>
+    <p>This card layout is fully responsive and beautifully styled with colors for a clean, modern look.</p>
+  </div>
+
+</body>
+</html>

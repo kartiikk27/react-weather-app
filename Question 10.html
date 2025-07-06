@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dynamic List with DOM</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #e3f2fd;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+    }
+
+    h2 {
+      color: #0d47a1;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      margin-bottom: 20px;
+    }
+
+    li {
+      font-size: 16px;
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #1976d2;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0d47a1;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Dynamic List</h2>
+
+  <ul id="myList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+  </ul>
+
+  <button onclick="addItem()">Add Item</button>
+
+  <script>
+    let count = 3;
+
+    function addItem() {
+      const ul = document.getElementById("myList");
+      const li = document.createElement("li");
+      li.textContent = "Item " + count;
+      ul.appendChild(li);
+      count++;
+    }
+  </script>
+
+</body>
+</html>

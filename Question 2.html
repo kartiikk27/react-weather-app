@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Web Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      margin: 40px;
+      color: #333;
+    }
+
+    h1 {
+      color: #005f99;
+    }
+
+    img {
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+
+    form {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      max-width: 400px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #aaa;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      margin-top: 15px;
+      background-color: #007acc;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #005f99;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Hello, Welcome to My Website</h1>
+  <p>This is a simple HTML5 page that includes a title, heading, paragraph, image, and a styled form.</p>
+
+  <img src="cipher image.png" alt="CipherSchool" width="300">
+
+  <h2>Contact Me</h2>
+  <form onsubmit="alert('Form submitted successfully!'); return false;">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <input type="submit" value="Submit">
+  </form>
+
+</body>
+</html>

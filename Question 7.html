@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Change Message Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      text-align: center;
+      padding: 50px;
+    }
+
+    #message {
+      font-size: 24px;
+      color: #00796b;
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005f99;
+    }
+  </style>
+  <script>
+    function changeMessage() {
+      document.getElementById("message").textContent = "The message has been changed!";
+    }
+  </script>
+</head>
+<body>
+
+  <h2 id="message">This is the original message.</h2>
+  <button onclick="changeMessage()">Click Me</button>
+
+</body>
+</html>

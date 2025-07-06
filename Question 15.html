@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Font Size with Media Query</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 18px; /* Default font size */
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 32px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    /* ✅ Media query: Apply smaller font size on small screens */
+    @media (max-width: 600px) {
+      body {
+        font-size: 14px; /* Smaller base font size */
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Responsive Font Size</h1>
+  <p>
+    This text resizes on smaller screens using a CSS media query.
+    Resize your browser window or view on a phone to see the font size shrink.
+  </p>
+
+</body>
+</html>
